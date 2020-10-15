@@ -1,0 +1,9 @@
+@import "../../../styles/styles.scss";
+
+.navbar {
+  background-color: rgba(48, 48, 48, 0.8);
+  backdrop-filter: saturate(180%) blur(20px);
+  .navbar-brand {
+    flex-grow: 1.5;
+  }
+}

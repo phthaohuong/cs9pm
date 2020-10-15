@@ -1,0 +1,42 @@
+// Button Types
+.btn-primary {
+  @include btn($color-white, $button, $fw3, $primary-color-main);
+  text-transform: uppercase;
+  padding: $pd-2 $pd-4;
+  border-color: transparent;
+  &:hover {
+    color: $color-white;
+    background-color: $primary-color-dark;
+    border-color: transparent;
+  }
+}
+
+.btn-quiet {
+  @include btn($color-white, $button, $fw3, transparent);
+  text-transform: uppercase;
+  padding: $pd-2 $pd-4;
+  border-color: transparent;
+  &:hover {
+    color: $color-white;
+    background-color: transparent;
+    border-color: $color-white;
+  }
+}
+
+.btn-category {
+  @include btn($color-white, $button, $fw2, $gray-5);
+  padding: $pd-2 $pd-4;
+  border-color: $gray-5;
+  opacity: 50%;
+  &:hover {
+    opacity: 100%;
+    background-color: $gray-5;
+    transition: all ease-in-out 0.2s;
+  }
+}
+
+.btn-category-active {
+  @include btn($color-white, $button, $fw2, $indigo-50);
+  padding: $pd-2 $pd-4;
+  border-color: $primary-color-light;
+}

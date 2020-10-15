@@ -1,0 +1,38 @@
+// Text
+@mixin text($color, $fs, $fw) {
+  color: $color;
+  font-size: $fs;
+  font-weight: $fw;
+}
+
+// Button
+@mixin btn($color, $fs, $fw, $bg-color) {
+  color: $color;
+  font-size: $fs;
+  font-weight: $fw;
+  background-color: $bg-color;
+}
+
+@mixin make-response-to($breakpoint) {
+  @if map-has-key($map: $breakpoints, $key: $breakpoint) {
+    $value: map-get(
+      $map: $breakpoints,
+      $key: $breakpoint,
+    );
+    @media screen and (max-width: $value) {
+      @content;
+    }
+  } @else {
+    @warn "Can't find the breakpoint";
+  }
+}
+
+@mixin make-container($container-min-width) {
+  @if map-has-key($map: $container-min-widths, $key: $container-min-width) {
+    $value: map-get(
+      $map: $container-min-widths,
+      $key: $container-min-width,
+    );
+    max-width: $value;
+  }
+}

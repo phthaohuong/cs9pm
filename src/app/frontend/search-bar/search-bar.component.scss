@@ -1,0 +1,41 @@
+@import "../../../styles/styles.scss";
+
+.search-bar {
+  border-radius: 4px;
+  padding: $pd-3 $pd-3 0 $pd-3;
+  background-color: $color-white;
+  box-shadow: 1px 8px 16px $gray-4;
+  position: absolute;
+  bottom: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  .form-group {
+    .form-control {
+      border-color: transparent;
+      border-right: 1px solid $gray-1;
+      border-radius: 0px;
+      margin-right: $mg-1;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+  @include make-response-to("large") {
+    .form-group {
+      margin: $mg-1 0;
+      .form-control {
+        border-right: none;
+      }
+    }
+    button {
+      margin-bottom: $mg-4;
+      width: 100%;
+    }
+  }
+  // Responsive on Tablet Screen
+  @include make-response-to("large") {
+    position: static;
+    transform: translate(0, -48px);
+  }
+}

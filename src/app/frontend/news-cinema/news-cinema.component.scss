@@ -1,0 +1,194 @@
+@import "../../../styles/styles.scss";
+
+.news-list {
+  margin-left: -$mg-3;
+  margin-right: -$mg-3;
+  .news-list__lg {
+    display: flex;
+    flex-wrap: nowrap;
+    .news-item {
+      .news-item__thumbnail {
+        img {
+          width: 100%;
+          display: block;
+          border-radius: 8px;
+        }
+      }
+      a {
+        display: inline-block;
+        padding: $pd-2 0;
+        @include text($color-white, $body1, $fw3);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 62px;
+      }
+      p {
+        @include text($gray-1, $body2, $fw2);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 66px;
+      }
+      .news-item__icon {
+        display: flex;
+        .news-item__like {
+          margin-right: $mg-3;
+        }
+        .news-item__like,
+        .news-item__comment {
+          i,
+          span {
+            color: $gray-2;
+          }
+        }
+      }
+    }
+  }
+
+  .news-list__sm-xs {
+    display: flex;
+    padding: $pd-4 0;
+    .news-list__sm {
+      color: transparent;
+      .news-item {
+        .news-item__thumbnail {
+          img {
+            width: 100%;
+            display: block;
+            border-radius: 8px;
+          }
+        }
+        a {
+          display: inline-block;
+          padding: $pd-2 0;
+          @include text($color-white, $body1, $fw3);
+          overflow: hidden;
+          text-overflow: ellipsis;
+          height: 60px;
+        }
+        p {
+          @include text($gray-1, $body2, $fw2);
+          overflow: hidden;
+          text-overflow: ellipsis;
+          height: 56px;
+        }
+        .news-item__icon {
+          display: flex;
+          .news-item__like {
+            margin-right: $mg-3;
+          }
+          .news-item__like,
+          .news-item__comment {
+            i,
+            span {
+              color: $gray-2;
+            }
+          }
+        }
+      }
+    }
+    .news-list__xs {
+      .news-item-xs {
+        display: flex;
+        align-items: center;
+        padding-bottom: $pd-3;
+        .news-item-xs__thumbnail {
+          flex: 1;
+          img {
+            width: 100%;
+            border-radius: 8px;
+            display: block;
+          }
+        }
+        .news-item-xs__title {
+          padding-left: $pd-2;
+          flex: 3;
+          @include text($color-white, $body2, $fw3);
+          overflow: hidden;
+          text-overflow: ellipsis;
+          height: 42px;
+        }
+      }
+    }
+  }
+}
+@include make-response-to("medium") {
+  .news-list {
+    .news-list__lg {
+      display: flex;
+      flex-wrap: wrap;
+      .news-item {
+        margin-bottom: $mg-3;
+        a {
+          @include text($color-white, $h3, $fw3);
+          height: auto;
+        }
+      }
+    }
+    .news-list__sm-xs {
+      display: flex;
+      flex-wrap: wrap;
+      padding-top: 0;
+      .news-list__sm {
+        .news-item {
+          margin-bottom: $mg-3;
+          a {
+            @include text($color-white, $h3, $fw3);
+            height: auto;
+          }
+          p {
+            @include text($gray-1, $body2, $fw2);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            height: 66px;
+          }
+        }
+      }
+      .news-list__xs {
+        .news-item-xs {
+          .news-item-xs__title {
+            flex: 5;
+            @include text($color-white, $body1, $fw3);
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}
+@include make-response-to("small") {
+  .news-list {
+    .news-list__lg {
+      .news-item {
+        a {
+          @include text($color-white, $body1, $fw3);
+          height: auto;
+        }
+      }
+    }
+    .news-list__sm-xs {
+      .news-list__sm {
+        .news-item {
+          a {
+            @include text($color-white, $body1, $fw3);
+            height: auto;
+          }
+          p {
+            @include text($gray-1, $body2, $fw2);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            height: 66px;
+          }
+        }
+      }
+      .news-list__xs {
+        .news-item-xs {
+          .news-item-xs__title {
+            flex: 3;
+            @include text($color-white, $body2, $fw3);
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}

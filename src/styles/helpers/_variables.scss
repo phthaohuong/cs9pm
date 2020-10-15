@@ -1,0 +1,75 @@
+// COLORS
+$color-white: #ffffff;
+$color-black: #000000;
+// -------Primary Colors
+$primary-color-main: #5e5ce6;
+$primary-color-light: #9589ff;
+$primary-color-dark: #4423f3;
+// -------Accent Colors
+$accent-color-yellow: #ffd60a;
+$accent-color-green: #30d158;
+$accent-color-pink: #ff375f;
+// Opacity Colors
+$indigo-50: rgba(94, 92, 230, 0.5);
+
+// -------Grey Shade
+$gray-1: #d1d1d6;
+$gray-2: #8e8e93;
+$gray-3: #636366;
+$gray-4: #3a3a3c;
+$gray-5: #161a25;
+$gray-6: #0c101c;
+
+// TYPOGRAPHY
+$h1: 40px;
+$h2: 32px;
+$h3: 28px;
+$h4: 24px;
+$h5: 20px;
+$h6: 16px;
+$button: 14px;
+$body1: 16px;
+$body2: 14px;
+$overline1: 12px;
+$overline2: 10px;
+
+// FONTWEIGHT
+$fw1: 300;
+$fw2: 400;
+$fw3: 700;
+
+// SPACING
+// -------Padding
+$pd-1: 4px;
+$pd-2: 8px;
+$pd-3: 16px;
+$pd-4: 24px;
+$pd-5: 32px;
+$pd-6: 40px;
+$pd-7: 48px;
+$pd-8: 56px;
+// -------Margin
+$mg-1: 4px;
+$mg-2: 8px;
+$mg-3: 16px;
+$mg-4: 24px;
+$mg-5: 32px;
+$mg-6: 40px;
+$mg-7: 48px;
+$mg-8: 56px;
+
+// BREAKPOINTS
+$breakpoints: (
+  "extra-large": 1200px,
+  "large": 992px,
+  "medium": 768px,
+  "small": 576px,
+);
+
+// CONTAINER MIN-WIDTH
+$container-min-widths: (
+  "extra-large": 1140px,
+  "large": 960px,
+  "medium": 720px,
+  "small": 540px,
+);
